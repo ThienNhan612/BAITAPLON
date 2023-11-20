@@ -6,6 +6,7 @@ import BooksView from '../views/BooksView.vue';
 import ProductsView from '../views/ProductsView.vue'
 import StoreBookView from '../views/StoreBookView.vue'
 import DetailProductView from '../views/DetailProductView.vue'
+import LoginView from '../views/LoginView.vue'
 // import DetailBookView from '../views/DetailBookView.vue'
 
 const router = createRouter({
@@ -50,11 +51,11 @@ const router = createRouter({
             component: DetailProductView
         },
 
-        // {
-        //     path: '/book/:id',
-        //     name: 'detailBeverage',
-        //     component: DetailBookView
-        // },
+        {
+            path: '/login',
+            name: 'Login',
+            component: LoginView
+        },
     ]
 })
 

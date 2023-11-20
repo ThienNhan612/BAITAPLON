@@ -8,7 +8,7 @@ const Beverage = new mongoose.Schema({
   description: {type: String},
   price: {type: String, require: true },
   typeOf: {type: String, maxLength: 256},
-
+  updatedAt: { type: Date, default: Date.now }
 }, {collection: 'beverages'});
 
 module.exports = mongoose.model('Beverage', Beverage);

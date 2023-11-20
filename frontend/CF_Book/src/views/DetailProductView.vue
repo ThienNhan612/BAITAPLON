@@ -27,6 +27,16 @@
                                 {{ beverage.description }}
                             </p>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <button class="btn btn-danger" @click="delete">Xoá</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <button class="btn btn-danger" @click="delete">Update</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,30 +46,44 @@
 <script>
 import axios from 'axios';
 import staticPath from '../assets/staticPath/index';
+
 export default {
-    data() {
-        return {
-            beverage: null
-        }
+  data() {
+    return {
+      beverage: null
+    }
+  },
+  computed: {
+    id() {
+      return this.$route.params.id;
     },
-    computed: {
-        id() {
-            return this.$route.params.id;
-        },
-        path() {
-            return staticPath;
-        }
-    },
-    created() {
-        axios
-            .get('http://localhost:3000/beverage/' + this.id)
-            .then(res => {
-                this.beverage = res.data;
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    },
+    path() {
+      return staticPath;
+    }
+  },
+  created() {
+    axios
+      .get('http://localhost:3000/beverage/' + this.id)
+      .then(res => {
+        this.beverage = res.data;
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  methods: {
+    deletebeverage() {
+      axios
+        .delete('http://localhost:3000/beverage/' + this.id)
+        .then(res => {
+          // Xử lý thành công sau khi xóa sản phẩm (ví dụ: chuyển hướng về trang danh sách sản phẩm)
+          this.$router.push('/products');
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
 }
 </script>
 

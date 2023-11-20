@@ -106,8 +106,8 @@
       <!-- Footer Elements -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-white text-center py-3">© 2023 LILY COFFE BOOk:
-        <a href="/">THƯ GIẢN CÙNG LILY</a>
+      <div class="footer-copyright text-white text-center py-3">© 2023 24H COFFEE:
+        <a href="/">Menu 24H</a>
       </div>
       <!-- Copyright -->
 

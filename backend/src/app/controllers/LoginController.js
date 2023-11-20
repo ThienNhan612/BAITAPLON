@@ -1,4 +1,5 @@
 
+const Books = require('../models/Books');
 class LoginController {
 
     //[GET] /news

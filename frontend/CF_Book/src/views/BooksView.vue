@@ -1,6 +1,6 @@
 <template >
     <div class="home-view mt-4 container-fluid">
-        <h4>Vườn Sách nhà LILY</h4>
+        <h4> SÁCH</h4>
         <div class="sections row">
             <template v-for="(book, index) in books" :key="index">
 

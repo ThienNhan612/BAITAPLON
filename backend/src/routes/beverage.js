@@ -13,5 +13,7 @@ router.get('/', BeverageController.index);
 
 router.get('/:id', BeverageController.show);
 
+router.get('/:id', BeverageController.delete);
+// Xử lý yêu cầu DELETE để xóa sản phẩm
 
 module.exports = router;

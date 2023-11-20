@@ -1,6 +1,6 @@
 <template >
     <div class="coffee-view mt-4 container-fluid">
-        <h4>Cà Phê cùng LILY</h4>
+        <h4> CÀ PHÊ</h4>
         <div class="sections row">
             <template v-for="(beverage, index) in beverages" :key="index">
 
@@ -22,7 +22,7 @@
 </template>
 <script>
 import axios from 'axios';
-import staticPath from '../assets/staticPath/index';
+import staticPath from '../assets/staticPath/index.js';
 
 export default {
     data() {

@@ -1,6 +1,6 @@
 <template >
     <div class="tea-view mt-4 container-fluid">
-        <h4>"Đạo" Trà</h4>
+        <h4>TRÀ</h4>
         <div class="sections row">
             <template v-for="(beverage, index) in beverages" :key="index">
 

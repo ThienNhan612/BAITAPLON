@@ -1,7 +1,6 @@
 {
-  "name": "CF_Book",
+  "name": "cf_book",
   "version": "1.0.0",
-  "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
@@ -21,5 +20,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThienNhan612/B2016988_DinhThienNhan_Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThienNhan612/B2016988_DinhThienNhan_Backend/issues"
+  },
+  "homepage": "https://github.com/ThienNhan612/B2016988_DinhThienNhan_Backend#readme",
+  "description": ""
 }

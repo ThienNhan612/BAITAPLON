@@ -34,7 +34,38 @@ class BeverageController {
             }));
 
     }
-
+    delete(req, res, next) {
+        Beverage.findByIdAndDelete(req.params.id)
+          .then(deletedBeverage => {
+            if (!deletedBeverage) {
+              return res.status(404).json({ error: 'Sản phẩm không tồn tại.' });
+            }
+            return res.status(200).json({ message: 'Sản phẩm đã được xóa thành công.' });
+          })
+          .catch(next);
+      }
+    
 }
 
+
+// Hàm xử lý yêu cầu xóa sản phẩm
+const deleteBeverage = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const deletedBeverage = await Beverage.findByIdAndDelete(id);
+  
+      if (!deletedBeverage) {
+        return res.status(404).json({ error: 'Sản phẩm không tồn tại.' });
+      }
+  
+      return res.status(200).json({ message: 'Sản phẩm đã được xóa thành công.' });
+    } catch (error) {
+      return res.status(500).json({ error: 'Đã xảy ra lỗi khi xóa sản phẩm.' });
+    }
+  };
+  
+  module.exports = {
+    deleteBeverage
+  };
 module.exports = new BeverageController;

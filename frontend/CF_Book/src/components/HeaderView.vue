@@ -3,7 +3,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-                <router-link to="/" class="navbar-brand">LILY COFFE BOOK</router-link>
+                <router-link to="/" class="navbar-brand">24H COFFEE BOOK</router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,6 +29,10 @@
                         <li class="nav-item">
                             <router-link to="/book/create" class="nav-link">Thêm sách</router-link>
                         </li>
+                        <li class="nav-item">
+                            <router-link to="/login" class="nav-link">Đăng nhập</router-link>
+                        </li>
+                        
                     </ul>
 
                 </div>
